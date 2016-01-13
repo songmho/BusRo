@@ -20,7 +20,7 @@
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait">
              </activity>
-        <activity android:name=".RouteActivity"
+        <activity android:name=".Dep_arr_Activity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -31,7 +31,7 @@
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".RouteActivity"
+                android:value=".Dep_arr_Activity"
                 />
         </activity>
         <meta-data
