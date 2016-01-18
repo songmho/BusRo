@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BUS RO"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textStyle="bold"
         android:layout_marginTop="10dp"
         android:textColor="#FFFFFF"
@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="버스로"
-                android:textSize="40dp"
+                android:textSize="35dp"
                 android:textColor="#67c6d8"
                 />
         </LinearLayout>
