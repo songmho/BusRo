@@ -16,13 +16,12 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_splash);
-        new android.os.Handler().postDelayed(new Runnable() {
+
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                finish();
             }
         }, SPLASHTIME);
-
     }
 }
