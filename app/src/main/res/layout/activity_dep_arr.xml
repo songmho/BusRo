@@ -16,7 +16,7 @@
     android:layout_height = "wrap_content"
     android:text = "노선조회"
     android:textColor = "#FFFFFF"
-    android:textSize = "20pt"
+    android:textSize = "19pt"
     android:layout_gravity = "left"
     android:background="#1111FF"
     />
