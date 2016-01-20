@@ -22,20 +22,21 @@
     />
 
     <ImageView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:background="@drawable/depart"/>
+        android:layout_height="70dp"
+        android:layout_width="70dp"
+        android:background="@drawable/depart"
+        />
 
 
     <ImageView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_width="70dp"
         android:background="@drawable/dotLine"/>
 
 
     <ImageView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_width="70dp"
         android:background="@drawable/depart"/>
 
     <LinearLayout
