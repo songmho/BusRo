@@ -77,7 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="서울"
-                android:textSize="18pt">
+                android:textSize="18pt"/>
 
 
         </LinearLayout>
