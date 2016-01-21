@@ -78,7 +78,6 @@
                 android:text="서울"
                 android:textSize="18pt"/>
 
-
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
