@@ -12,11 +12,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_height="70dp"
-            android:layout_width="72dp"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
             android:background="@drawable/depart"
             />
 
@@ -26,59 +31,200 @@
             android:text = "출발"
             android:textSize = "15pt"
             />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서울"
+            android:textSize="15pt"/>
+
     </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <ImageView
-        android:layout_height="70dp"
-        android:layout_width="70dp"
+        <ImageView
+        android:layout_height="50dp"
+        android:layout_width="50dp"
         android:background="@drawable/dotLine"/>
+
+        <ImageView
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:background="@drawable/change_dep_arr"/>
+
+        </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-    <ImageView
-        android:layout_height="70dp"
-        android:layout_width="70dp"
+        <ImageView
+        android:layout_height="50dp"
+        android:layout_width="50dp"
         android:background="@drawable/depart"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:orientation="vertical"
-        android:layout_weight="0.25">
 
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="도착"
-            android:textSize="15pt"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="도착"
+                android:textSize="15pt"/>
 
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "강원도 원주"
+                android:textSize = "15pt"/>
+    </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+        android:layout_margin="20dp"
+        >
+        <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+
+            <ImageView
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:background="@drawable/calendar"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="출발일"
+                android:textSize="15pt"/>
+        </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:orientation="vertical"
-            android:layout_weight="0.25">
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text = "강원도 원주"
-             android:textSize = "18pt"/>
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="서울"
-                android:textSize="18pt"/>
+                android:text="2015년 9월 6일 토"
+                android:textSize="8pt"/>
+
+            <ImageView
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:background="@drawable/more"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘"
+                android:textSize="10pt"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내일"
+                android:textSize="10pt"
+                android:gravity="center"/>
+
 
         </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
 
+      </LinearLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:text="검색"
+            android:textSize="15pt"
+            android:textColor="#FFFFFF"
+            android:background="#B01E23"
+            android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:background="@drawable/cur_search"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최근검색"
+                android:textSize="10pt"
+                android:textColor="#595757"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="강원원주시"
+                android:textSize="12pt"/>
+            <ImageView
+                android:layout_height="70dp"
+                android:layout_width="70dp"
+                android:background="@drawable/cur_arrow"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="경북영천시"
+                android:textSize="12pt"/>
+            <ImageView
+                android:layout_height="70dp"
+                android:layout_width="70dp"
+                android:background="@drawable/cur_more"/>
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="서울특별시"
+                    android:textSize="12pt"/>
+                <ImageView
+                    android:layout_height="70dp"
+                    android:layout_width="70dp"
+                    android:background="@drawable/cur_arrow"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="강원원주시"
+                    android:textSize="12pt"/>
+                <ImageView
+                    android:layout_height="70dp"
+                    android:layout_width="70dp"
+                    android:background="@drawable/cur_more"/>
+
+        </LinearLayout>
+
+
+
+
+</LinearLayout></LinearLayout>
