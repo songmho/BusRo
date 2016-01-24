@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this,Dep_arr_Activity.class));
                 break;
             case R.id.box2:
-                Toast.makeText(MainActivity.this, "진행중", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,BoardActivity.class));
                 break;
             case R.id.box3:
                 Toast.makeText(MainActivity.this, "진행중", Toast.LENGTH_SHORT).show();

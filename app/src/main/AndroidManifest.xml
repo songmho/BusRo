@@ -34,6 +34,10 @@
                 android:value=".Dep_arr_Activity"
                 />
         </activity>
+        <activity android:name=".BoardActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
 
 
 
