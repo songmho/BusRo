@@ -3,6 +3,7 @@ package com.busro.busro;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
 /**
  * Created by 최정환 on 2016-01-24.
@@ -13,5 +14,11 @@ public class BoardActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board);
+
+        Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("게시판");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

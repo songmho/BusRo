@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0x00ffffff));
         getSupportActionBar().setTitle("");
 
-
         box[0]=(LinearLayout)findViewById(R.id.box1);
         box[1]=(LinearLayout)findViewById(R.id.box2);
         box[2]=(LinearLayout)findViewById(R.id.box3);
