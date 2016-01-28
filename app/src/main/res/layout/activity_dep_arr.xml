@@ -40,9 +40,9 @@
 
         <TextView
             android:id="@+id/depart"
-            android:layout_width="200dp"
+            android:layout_width="180dp"
             android:layout_height="match_parent"
-            android:text="서울"
+            android:text="출발지"
             android:textSize = "15dp"
             android:gravity="center|left"/>
         <ImageView
@@ -62,10 +62,16 @@
                 android:src="@drawable/dotline"
                 android:layout_gravity="center"/>
             <View
-                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:layout_width="250dp"
                 android:layout_height="1dp"
                 android:background="#EEEEEE"
                 android:layout_gravity="center"/>
+            <Button
+                android:id="@+id/change"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/change_dep_arr"/>
         </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -89,9 +95,9 @@
 
         <TextView
             android:id="@+id/arrive"
-            android:layout_width="200dp"
+            android:layout_width="180dp"
             android:layout_height="match_parent"
-            android:text = "강원도 원주"
+            android:text = "도착지"
             android:textSize = "15dp"
             android:gravity="center|left"/>
         <ImageView
@@ -134,10 +140,11 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="2015년 9월 6일 토"
-                android:layout_gravity="center"
+                android:text="        년     월     일"
+                android:gravity="center"
                 android:textSize="8pt"/>
 
             <ImageView
@@ -146,12 +153,14 @@
                 android:layout_gravity="bottom"
                 android:background="@drawable/more"/>
             <Button
+                android:id="@+id/today"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="오늘"
                 android:gravity="center"/>
 
             <Button
+                android:id="@+id/tomorrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="내일"
