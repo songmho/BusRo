@@ -7,47 +7,6 @@
     <include
         layout="@layout/toolbar"
         android:id="@+id/toolbar"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:background="@drawable/image_1"
-            android:weightSum="10">
-            <LinearLayout
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/back"
-                android:layout_weight="1">
-
-            </LinearLayout>
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:text="게시판"
-                android:textSize="30dp"
-                android:layout_weight="7"/>
-            <LinearLayout
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/search_1"
-                android:layout_weight="1"
-                >
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/dotLine"
-                android:layout_weight="1">
-
-            </LinearLayout>
-
-        </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
@@ -83,10 +42,19 @@
                     android:textSize="20dp"
                     android:layout_margin="7dp"/>
             </LinearLayout>
+
         </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/boradrecyclerview">
+
+    </android.support.v7.widget.RecyclerView>
+
     </LinearLayout>
 
-
-
-</LinearLayout>
+    </LinearLayout>
 

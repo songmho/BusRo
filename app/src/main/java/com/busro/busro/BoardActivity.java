@@ -3,7 +3,13 @@ package com.busro.busro;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by 최정환 on 2016-01-24.
@@ -20,5 +26,19 @@ public class BoardActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("게시판");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        RecyclerView recyclerView=(RecyclerView)findViewById(R.id.boradrecyclerview);
+        LinearLayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(layoutManager);
+
+        List<Recycler_Boarditem> items=new ArrayList<>();
+        Recycler_Boarditem[] item=new Recycler_Boarditem[12];
+        for(int i=0;i<12;i++) {
+            item[i] = new Recycler_Boarditem(0, R.drawable.thumbsup, 0, R.drawable.chat, 0, 0, "ㅣ 조회 ", 0);
+            items.add(item[i]);
+        }
+
+        recyclerView.setAdapter(new RecyclerBoardAdapter(getApplicationContext(),items,R.layout.activity_board));
     }
 }
