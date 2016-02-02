@@ -27,7 +27,7 @@ public class BoardActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("게시판");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        RecyclerView recyclerView=(RecyclerView)findViewById(R.id.boradrecyclerview);
+        RecyclerView recyclerView=(RecyclerView)findViewById(R.id.boardrecyclerview);
         LinearLayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
