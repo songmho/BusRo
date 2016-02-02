@@ -50,7 +50,12 @@
                 />
         </activity>
 
-
+        <activity android:name=".Result_Activity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dep_arr_Activity"/>
+        </activity>
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="c5329d095143c071e089194a92e14d2c7a3bb4c7" />

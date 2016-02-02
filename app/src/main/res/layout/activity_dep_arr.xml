@@ -173,15 +173,16 @@
 
 
        <Button
-            android:layout_width="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_height="wrap_content"
-            android:text="검색"
-            android:textSize="18dp"
-            android:textColor="#FFFFFF"
-            android:background="#B01E23"
-            android:gravity="center"/>
+           android:id="@+id/search"
+           android:layout_width="match_parent"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:layout_height="wrap_content"
+           android:text="검색"
+           android:textSize="18dp"
+           android:textColor="#FFFFFF"
+           android:background="#B01E23"
+           android:gravity="center"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

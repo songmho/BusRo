@@ -22,7 +22,7 @@ import java.util.Date;
 public class Dep_arr_Activity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView depart, arrive, date;
-    private Button change,today, tomorrow;
+    private Button change,today, tomorrow,search;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,6 +42,7 @@ public class Dep_arr_Activity extends AppCompatActivity implements View.OnClickL
         date=(TextView)findViewById(R.id.date);
         today=(Button)findViewById(R.id.today);
         tomorrow=(Button)findViewById(R.id.tomorrow);
+        search=(Button)findViewById(R.id.search);
 
         depart.setOnClickListener(this);
         arrive.setOnClickListener(this);
@@ -49,6 +50,7 @@ public class Dep_arr_Activity extends AppCompatActivity implements View.OnClickL
         date.setOnClickListener(this);
         today.setOnClickListener(this);
         tomorrow.setOnClickListener(this);
+        search.setOnClickListener(this);
     }
 
     @Override
@@ -87,6 +89,10 @@ public class Dep_arr_Activity extends AppCompatActivity implements View.OnClickL
                 date.setText(""+format.format(d));
                 break;
             case R.id.tomorrow:
+                break;
+            case R.id.search:
+                Intent intent_result=new Intent(Dep_arr_Activity.this,Result_Activity.class);
+                startActivity(intent_result);
                 break;
         }
     }
