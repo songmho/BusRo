@@ -32,8 +32,9 @@ public class TimeResultFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         List<TimeResultItem> items=new ArrayList<>();
+        for(int i=0;i<4;i++){
         TimeResultItem item=new TimeResultItem();
-        items.add(item);
+        items.add(item);}
 
         recyclerView.setAdapter(new TimeResultAdapter(getActivity(),items));
 

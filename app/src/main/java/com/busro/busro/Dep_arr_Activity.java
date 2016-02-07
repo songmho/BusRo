@@ -92,6 +92,8 @@ public class Dep_arr_Activity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.search:
                 Intent intent_result=new Intent(Dep_arr_Activity.this,Result_Activity.class);
+                intent_result.putExtra("depart","서울");
+                intent_result.putExtra("arrive","원주");
                 startActivity(intent_result);
                 break;
         }
