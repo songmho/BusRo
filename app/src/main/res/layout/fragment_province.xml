@@ -14,11 +14,13 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/busan"
             android:text="부산"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/daegu"
             android:text="대구"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -29,16 +31,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/incheon"
             android:text="인천"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/gwangju"
             android:text="광주"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/daejeon"
             android:text="대전"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -49,12 +54,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/ulsan"
             android:text="울산"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:text="세종"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -66,16 +67,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/gyeonggi"
             android:text="경기"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/gangwon"
             android:text="강원"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/gyeongbuk"
             android:text="경북"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -86,16 +90,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/gyeongnam"
             android:text="경남"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/chungbuk"
             android:text="충북"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/chungnam"
             android:text="충남"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -106,11 +113,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/jeonbuk"
             android:text="전북"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/jeonnam"
             android:text="전남"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

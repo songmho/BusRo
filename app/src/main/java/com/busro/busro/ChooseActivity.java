@@ -32,6 +32,8 @@ public class ChooseActivity extends AppCompatActivity implements View.OnClickLis
             getSupportActionBar().setTitle("도착지 선택");
 
         fragment=new ProvinceFragment();
+        //번들 추가 필요
+        //
         fragmentTransaction.replace(R.id.container,fragment);
         fragmentTransaction.commit();
 

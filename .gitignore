@@ -5,3 +5,7 @@
 .DS_Store
 /build
 /captures
+BusRo.iml
+app.iml
+fabric.properties
+gradle.properties
