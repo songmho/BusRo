@@ -35,7 +35,7 @@ public class BoardActivity extends AppCompatActivity {
         List<Recycler_Boarditem> items=new ArrayList<>();
         Recycler_Boarditem[] item=new Recycler_Boarditem[12];
         for(int i=0;i<12;i++) {
-            item[i] = new Recycler_Boarditem(0, R.drawable.thumbsup, 0, R.drawable.chat, 0, 0, "ㅣ 조회 ", 0);
+            item[i] = new Recycler_Boarditem("0", R.drawable.thumbsup, 0, R.drawable.chat, 0, "0", "ㅣ 조회 ", 0);
             items.add(item[i]);
         }
 

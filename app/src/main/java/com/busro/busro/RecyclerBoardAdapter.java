@@ -36,10 +36,10 @@ public class RecyclerBoardAdapter extends RecyclerView.Adapter<RecyclerBoardAdap
     public void onBindViewHolder(RecyclerBoardAdapter.ViewHolder holder, int position) {
         final Recycler_Boarditem item=items.get(position);
         holder.boardtext.setText(""+item.getBoardtext());
-        holder.boardtext1.setText(""+item.getBoardtext1());
-        holder.boardtext2.setText(""+item.getBoardtext2());
-        holder.boardtext3.setText(""+item.getBoardtext3());
-        holder.boardtext5.setText(""+item.getBoardtext5());
+        holder.boardthumbsuptext.setText(""+item.getBoardthumbsuptext());
+        holder.boardchattext.setText(""+item.getBoardchattext());
+        holder.boardnickname.setText(""+item.getBoardnickname());
+        holder.boardhitstext.setText(""+item.getBoardhitstext());
     }
 
     @Override
@@ -49,18 +49,18 @@ public class RecyclerBoardAdapter extends RecyclerView.Adapter<RecyclerBoardAdap
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView boardtext;
-        TextView boardtext1;
-        TextView boardtext2;
-        TextView boardtext3;
-        TextView boardtext5;
+        TextView boardthumbsuptext;
+        TextView boardchattext;
+        TextView boardnickname;
+        TextView boardhitstext;
 
         public ViewHolder(View itemview) {
             super(itemview);
             boardtext=(TextView)itemview.findViewById(R.id.boardtext);
-            boardtext1=(TextView)itemview.findViewById(R.id.boardtext1);
-            boardtext2=(TextView)itemview.findViewById(R.id.boardtext2);
-            boardtext3=(TextView)itemview.findViewById(R.id.boardtext3);
-            boardtext5=(TextView)itemview.findViewById(R.id.boardtext5);
+            boardthumbsuptext=(TextView)itemview.findViewById(R.id.boardthumbsuptext);
+            boardchattext=(TextView)itemview.findViewById(R.id.boardchattext);
+            boardnickname=(TextView)itemview.findViewById(R.id.boardnickname);
+            boardhitstext=(TextView)itemview.findViewById(R.id.boardhitstext);
         }
     }
 }

@@ -30,70 +30,72 @@
 
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum="10">
+        <Button
+            android:id="@+id/boardthumbsup"
+            android:layout_width="15dp"
+            android:layout_height="25dp"
+            android:background="@drawable/thumbsup"
+            android:layout_gravity="center"
+            android:layout_margin="6dp"
+            android:padding="2dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/boardthumbsuptext"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:weightSum="10">
-            <ImageView
-                android:id="@+id/boardthumbsup"
-                android:layout_width="15dp"
-                android:layout_height="25dp"
-                android:src="@drawable/thumbsup"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                android:padding="2dp"
-                android:layout_weight="1"/>
-            <TextView
-                android:id="@+id/boardtext1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1"
-                android:layout_gravity="center"
-                android:textColor="#E50011"/>
-            <ImageView
-                android:id="@+id/boardchat"
-                android:layout_width="20dp"
-                android:layout_height="30dp"
-                android:src="@drawable/chat"
-                android:layout_margin="6dp"
-                android:layout_gravity="center"/>
-            <TextView
-                android:id="@+id/boardtext2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10"
-                android:layout_gravity="center"
-                android:textColor="#33569B"/>
-            <TextView
-                android:id="@+id/boardtext3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="닉네임 "
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="5dp"
-                android:layout_gravity="bottom"
-                android:textColor="#9F9FA0"/>
-            <TextView
-                android:id="@+id/boardtext4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="l 조회 "
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="5dp"
-                android:textColor="#9F9FA0"/>
-            <TextView
-                android:id="@+id/boardtext5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" 10"
-                android:layout_marginBottom="5dp"
-                android:layout_gravity="bottom"
-                android:textColor="#9F9FA0"/>
+            android:text="1"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:textColor="#E50011"/>
+        <Button
+            android:id="@+id/boardchat"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:background="@drawable/chat"
+            android:layout_margin="6dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/boardchattext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:textColor="#33569B"/>
+        <TextView
+            android:id="@+id/boardnickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="닉네임 "
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="bottom"
+            android:textColor="#9F9FA0"/>
+        <TextView
+            android:id="@+id/boardhits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="l 조회 "
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:textColor="#9F9FA0"/>
+        <TextView
+            android:id="@+id/boardhitstext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 10"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="bottom"
+            android:textColor="#9F9FA0"/>
 
 
-        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
     </android.support.v7.widget.CardView>
