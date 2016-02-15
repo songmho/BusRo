@@ -21,7 +21,7 @@ import java.util.Date;
  */
 public class Dep_arr_Activity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView depart, arrive, date;
+    public TextView depart, arrive, date;
     private Button change,today, tomorrow,search;
 
     @Override
@@ -51,6 +51,12 @@ public class Dep_arr_Activity extends AppCompatActivity implements View.OnClickL
         today.setOnClickListener(this);
         tomorrow.setOnClickListener(this);
         search.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
     }
 
     @Override

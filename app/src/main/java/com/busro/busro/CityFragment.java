@@ -1,5 +1,7 @@
 package com.busro.busro;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -20,14 +22,16 @@ public class CityFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         LinearLayout cur_layout=(LinearLayout)inflater.inflate(R.layout.fragment_city,container,false);
-        Button seoul=(Button)cur_layout.findViewById(R.id.seoul);
+        final Button seoul=(Button)cur_layout.findViewById(R.id.seoul);
         seoul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-             getActivity().finish();
+                Intent intent =new Intent();
+                intent.putExtra("depart",seoul.getText().toString());
+                getActivity().setResult(Activity.RESULT_OK,intent);
+                getActivity().finish();
              }
         });
         return cur_layout;

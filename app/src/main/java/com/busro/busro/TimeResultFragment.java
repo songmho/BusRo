@@ -30,13 +30,14 @@ public class TimeResultFragment extends Fragment {
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
+        Bundle bundle = getArguments();
 
         List<TimeResultItem> items=new ArrayList<>();
         for(int i=0;i<4;i++){
         TimeResultItem item=new TimeResultItem();
         items.add(item);}
 
-        recyclerView.setAdapter(new TimeResultAdapter(getActivity(),items));
+        recyclerView.setAdapter(new TimeResultAdapter(getActivity(),items,bundle.getInt("time",0)));
 
         return cur_layout;
     }

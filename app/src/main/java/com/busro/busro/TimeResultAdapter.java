@@ -15,11 +15,15 @@ import java.util.List;
 public class TimeResultAdapter extends RecyclerView.Adapter {
     Context context;
     List<TimeResultItem> items;
+    int time;
+
     int HEADER = 0;
     int VIEW = 1;
-    public TimeResultAdapter(Context context, List<TimeResultItem> items) {
+
+    public TimeResultAdapter(Context context, List<TimeResultItem> items, int time) {
         this.context=context;
         this.items=items;
+        this.time=time;
     }
 
     @Override
@@ -49,7 +53,7 @@ public class TimeResultAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if(holder instanceof ViewHeader){
-
+            ((ViewHeader) holder).text.setText(String.valueOf(time+":00"));
         }
         else if(holder instanceof ViewHolder){
 
