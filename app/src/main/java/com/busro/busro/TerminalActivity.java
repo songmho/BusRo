@@ -12,7 +12,7 @@ import android.support.v7.widget.Toolbar;
  * Created by 은별 on 2016-01-21.
  */
 public class TerminalActivity extends AppCompatActivity{
-    int MAX_PAGE = 3;
+    int MAX_PAGE = 9;
     Fragment cur_fragment = new Fragment();
 
     @Override
@@ -39,16 +39,38 @@ public class TerminalActivity extends AppCompatActivity{
 
         @Override
         public Fragment getItem(int position) {
+            Bundle bundle= new Bundle();
+
             if (position < 0 || MAX_PAGE <= position)
                 return null;
             switch (position) {
                 case 0:
                     cur_fragment = new page_1();
-                    break;
+                    bundle.putString("location", "서울");
+                    cur_fragment.setArguments(bundle);
+                    return cur_fragment;
                 case 1:
                     cur_fragment = new page_1();
                     break;
                 case 2:
+                    cur_fragment = new page_1();
+                    break;
+                case 3 :
+                    cur_fragment = new page_1();
+                    break;
+                case 4 :
+                    cur_fragment = new page_1();
+                    break;
+                case 5 :
+                    cur_fragment = new page_1();
+                    break;
+                case 6 :
+                    cur_fragment = new page_1();
+                    break;
+                case 7 :
+                    cur_fragment = new page_1();
+                    break;
+                case 8 :
                     cur_fragment = new page_1();
                     break;
             }
@@ -64,12 +86,23 @@ public class TerminalActivity extends AppCompatActivity{
         public CharSequence getPageTitle(int position) {
             switch(position){
                 case 0:
-                    return "page1";
+                    return "서울";
                 case 1:
-                    return "page1";
+                    return "경기도";
                 case 2:
-                    return "page1";
-
+                    return "강원도";
+                case 3:
+                    return "경상남도";
+                case 4:
+                    return "경상북도";
+                case 5:
+                    return "충청남도";
+                case 6:
+                    return "충청북도";
+                case 7:
+                    return "전라남도";
+                case 8:
+                    return "전라북도";
             }
             return super.getPageTitle(position);
         }

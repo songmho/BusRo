@@ -3,6 +3,7 @@ package com.busro.busro;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +31,10 @@ public class page_1 extends android.support.v4.app.Fragment{
         List<Recycler_item> items = new ArrayList<>();
         Recycler_item item = new Recycler_item("test");
         items.add(item);
-        recyclerView.setAdapter(new RecyclerAdapter(getActivity(),items,R.layout.item_recyclerview));
+        recyclerView.setAdapter(new RecyclerAdapter(getActivity(), items, R.layout.item_recyclerview));
+
+        Bundle bundle = getArguments();
+        Log.d("ddd",bundle.getString("location"));
 
         return linearLayout;
     }
