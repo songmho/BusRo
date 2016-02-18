@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.Button;
 
 /**
  * Created by 은별 on 2016-01-21.
@@ -14,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 public class TerminalActivity extends AppCompatActivity{
     int MAX_PAGE = 9;
     Fragment cur_fragment = new Fragment();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
