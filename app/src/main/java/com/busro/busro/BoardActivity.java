@@ -1,6 +1,5 @@
 package com.busro.busro;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,9 +8,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
+
+import com.parse.FindCallback;
+import com.parse.GetCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +27,7 @@ import java.util.List;
 public class BoardActivity extends AppCompatActivity {
 
     FloatingActionButton fab;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,7 +40,7 @@ public class BoardActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("게시판");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        FloatingActionButton fab=(FloatingActionButton)findViewById(R.id.fab);
+        fab=(FloatingActionButton)findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,19 +49,26 @@ public class BoardActivity extends AppCompatActivity {
             }
         });
 
-        RecyclerView recyclerView=(RecyclerView)findViewById(R.id.boardrecyclerview);
+        recyclerView=(RecyclerView)findViewById(R.id.boardrecyclerview);
 
         LinearLayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
 
-        List<Recycler_Boarditem> items=new ArrayList<>();
-        Recycler_Boarditem[] item=new Recycler_Boarditem[12];
-        for(int i=0;i<12;i++) {
-            item[i] = new Recycler_Boarditem("0", R.drawable.thumbsup, 0, R.drawable.chat, 0, "0", "ㅣ 조회 ", 0);
-            items.add(item[i]);
-        }
+        final List<BoardItem> items=new ArrayList<>();
+        ParseQuery<ParseObject> query=new ParseQuery<>("Posting");
+        query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                for(ParseObject o:objects){
 
-        recyclerView.setAdapter(new RecyclerBoardAdapter(getApplicationContext(),items,R.layout.activity_board));
+                    BoardItem i=new BoardItem(o.getString("contents"),0,0,o.getString("pub_username"),0);
+                    items.add(i);
+                }
+
+                recyclerView.setAdapter(new BoardAdapter(getApplicationContext(),items,R.layout.activity_board));
+            }
+        });
+
     }
 }

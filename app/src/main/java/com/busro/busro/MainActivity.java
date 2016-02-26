@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.parse.LogInCallback;
+import com.parse.ParseException;
+import com.parse.ParseUser;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Toolbar toolbar;
@@ -31,6 +35,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for(LinearLayout ll: box)
             ll.setOnClickListener(this);
 
+        test();
+    }
+
+    private void test() {
+        ParseUser parseuser=new ParseUser();
+        parseuser.logInInBackground("songmho", "123456", new LogInCallback() {
+            @Override
+            public void done(ParseUser user, ParseException e) {
+                if(user!=null){
+                    Toast.makeText(MainActivity.this, "Logined!", Toast.LENGTH_SHORT).show();
+                }
+                else
+                    Toast.makeText(MainActivity.this, "We don't have a data.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

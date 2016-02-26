@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.widget.Button;
 
 /**
  * Created by 은별 on 2016-01-21.
@@ -29,10 +28,11 @@ public class TerminalActivity extends AppCompatActivity{
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ViewPager viewPager = (ViewPager)findViewById(R.id.viewpager);
-        viewPager.setAdapter(new adapter(getSupportFragmentManager()));
-
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tablayout);
+
+        viewPager.setAdapter(new adapter(getSupportFragmentManager()));
         tabLayout.setupWithViewPager(viewPager);
+
     }
     private class adapter extends FragmentPagerAdapter {
         public adapter(android.support.v4.app.FragmentManager fm) {
@@ -42,41 +42,55 @@ public class TerminalActivity extends AppCompatActivity{
         @Override
         public Fragment getItem(int position) {
             Bundle bundle= new Bundle();
-
-            if (position < 0 || MAX_PAGE <= position)
-                return null;
             switch (position) {
                 case 0:
-                    cur_fragment = new page_1();
-                    bundle.putString("location", "서울");
+                    cur_fragment = new TerminalFragment();
+                    bundle.putString("location", "서울/광역시");
                     cur_fragment.setArguments(bundle);
                     return cur_fragment;
                 case 1:
-                    cur_fragment = new page_1();
-                    break;
+                    cur_fragment = new TerminalFragment();
+                    bundle.putString("location", "경기");
+                    cur_fragment.setArguments(bundle);
+                    return cur_fragment;
                 case 2:
-                    cur_fragment = new page_1();
-                    break;
+                    cur_fragment = new TerminalFragment();
+                    bundle.putString("location", "강원");
+                    cur_fragment.setArguments(bundle);
+                    return cur_fragment;
                 case 3 :
-                    cur_fragment = new page_1();
-                    break;
+                    cur_fragment = new TerminalFragment();
+                    bundle.putString("location", "경남");
+                    cur_fragment.setArguments(bundle);
+                    return cur_fragment;
                 case 4 :
-                    cur_fragment = new page_1();
-                    break;
+                    cur_fragment = new TerminalFragment();
+                    bundle.putString("location", "경북");
+                    cur_fragment.setArguments(bundle);
+                    return cur_fragment;
                 case 5 :
-                    cur_fragment = new page_1();
-                    break;
+                    cur_fragment = new TerminalFragment();
+                    bundle.putString("location", "충남");
+                    cur_fragment.setArguments(bundle);
+                    return cur_fragment;
                 case 6 :
-                    cur_fragment = new page_1();
-                    break;
+                    cur_fragment = new TerminalFragment();
+                    bundle.putString("location", "충북");
+                    cur_fragment.setArguments(bundle);
+                    return cur_fragment;
                 case 7 :
-                    cur_fragment = new page_1();
-                    break;
+                    cur_fragment = new TerminalFragment();
+                    bundle.putString("location", "전남");
+                    cur_fragment.setArguments(bundle);
+                    return cur_fragment;
                 case 8 :
-                    cur_fragment = new page_1();
-                    break;
+                    cur_fragment = new TerminalFragment();
+                    bundle.putString("location", "전북");
+                    cur_fragment.setArguments(bundle);
+                    return cur_fragment;
+                default:
+                    return null;
             }
-            return cur_fragment;
         }
 
         @Override
@@ -88,7 +102,7 @@ public class TerminalActivity extends AppCompatActivity{
         public CharSequence getPageTitle(int position) {
             switch(position){
                 case 0:
-                    return "서울";
+                    return "서울/광역시";
                 case 1:
                     return "경기도";
                 case 2:
