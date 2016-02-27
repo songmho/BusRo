@@ -17,9 +17,9 @@ import java.util.List;
  */
 public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.ViewHolder> {
     Context context;
-    List<BoardItem> items;
+    List<Boarditem> items;
     int activity_board;
-    public BoardAdapter(Context applicationContext, List<BoardItem> items, int activity_board) {
+    public BoardAdapter(Context applicationContext, List<Boarditem> items, int activity_board) {
         this.context=applicationContext;
         this.items=items;
         this.activity_board=activity_board;
@@ -34,7 +34,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.ViewHolder> 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBindViewHolder(BoardAdapter.ViewHolder holder, int position) {
-        final BoardItem item=items.get(position);
+        final Boarditem item=items.get(position);
         holder.contents.setText(""+item.getBoardtext());
         holder.thumbsUpCount.setText(""+item.getBoardthumbsuptext());
         holder.chatCount.setText(""+item.getBoardchattext());

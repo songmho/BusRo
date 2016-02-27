@@ -55,14 +55,14 @@ public class BoardActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
 
-        final List<BoardItem> items=new ArrayList<>();
+        final List<Boarditem> items=new ArrayList<>();
         ParseQuery<ParseObject> query=new ParseQuery<>("Posting");
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
                 for(ParseObject o:objects){
 
-                    BoardItem i=new BoardItem(o.getString("contents"),0,0,o.getString("pub_username"),0);
+                    Boarditem i=new Boarditem(o.getString("contents"),0,0,o.getString("pub_username"),0);
                     items.add(i);
                 }
 

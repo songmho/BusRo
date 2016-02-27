@@ -3,7 +3,7 @@ package com.busro.busro;
 /**
  * Created by 최정환 on 2016-02-02.
  */
-public class BoardItem {
+public class Boarditem {
     int boardthumbsuptext,boardchattext,boardhitstext;
     String boardtext,boardnickname;
 
@@ -14,7 +14,7 @@ public class BoardItem {
     int getBoardhitstext() {return this.boardhitstext;}
 
 
-    BoardItem(String boardtext, int boardthumbsuptext, int boardchattext, String boardnickname, int boardhitstext){
+    Boarditem(String boardtext, int boardthumbsuptext, int boardchattext, String boardnickname, int boardhitstext){
         this.boardtext=boardtext;
         this.boardthumbsuptext=boardthumbsuptext;
         this.boardchattext=boardchattext;
